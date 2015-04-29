@@ -59,4 +59,4 @@ Si vous voulez procéder à l'installation :
 > docker version
 > docker-compose --version
 ----
-. Vous pouvez stopper la VM avec `vagrant halt` _(une fois sortie de la session ssh)_.
+Vous pouvez stopper la VM avec `vagrant halt` _(une fois sortie de la session ssh)_.
