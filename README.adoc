@@ -1,2 +1,58 @@
 = Docker - EPSI 6 mai 2015
 Présentation Docker - Session EPSI du 06 mai 2015
+
+NOTE: La présentation sera ponctuée de live demo pour vous montrer comment utiliser
+Docker et les outils associés comme docker-compose par exemple. Vous pouvez si vous le souhaitez,
+préparer votre poste pour pouvoir effectuer les différentes actions en même temps que moi.
+
+=== Pour les utilisateurs de Linux
+
+Docker est natif pour Linux car il se repose sur certaines fonctionnalités du Kernel (>3.10)
+
+Il suffit donc d'installer le moteur c'est par ici : https://docs.docker.com/installation/
+Je vous laisse vous référer a votre distrib.
+
+Pour vérifier l'installation :
+[source,shell]
+----
+> [sudo] docker version
+----
+
+=== Pour les autres (Windows et Mac)
+
+==== Boot2docker
+
+Pour les autres OS, nous utilisons un outil qui va se servir d'une VM Linux de manière masquée. Nous verrons tout cela ensemble.
+
+Pour la procédure d'installation, c'est par ici : http://boot2docker.io/
+
+Pour vérifier l'installation
+[source,shell]
+----
+> boot2docker start
+> docker version
+----
+Vous devriez être en 1.6
+
+==== Vagrant (facultatif)
+
+Un des outils autour de Docker est `docker-compose`. Cet outil n'est malheureusement pas installable sur la VM Boot2docker.
+
+Il faut pour cela passer par une VM Linux plus classique. VM qu'il est possible de provisionner automatiquement avec les outils VirtualBox et Vagrant.
+
+C'est comme vous voulez pour l'install (ca prend un peu de place ~4Go). Vous pourrez suivre la démo.
+
+Si vous voulez procéder à l'installation :
+
+. Installer VirtualBox : https://www.virtualbox.org/wiki/Downloads
+. Installer Vagrant : https://www.vagrantup.com/downloads.html
+. Copier le fichier `Vagrantfile` disponible sur ce repo sous un rep que nous nommerons "{REP}"
+. la commande `vagrant --version` doit fonctionner
+. Sous {REP}, lancer la commande `vagrant up` (Le premier lancement est long.)
+. Connectez-vous à la VM `vagrant ssh`
+. Sous le shell de la vm vérifier l'installation : 
+[source,shell]
+----
+> docker version
+> docker-compose --version
+----
