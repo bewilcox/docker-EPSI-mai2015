@@ -5,12 +5,15 @@ NOTE: La présentation sera ponctuée de live demo pour vous montrer comment uti
 Docker et les outils associés comme docker-compose par exemple. Vous pouvez si vous le souhaitez,
 préparer votre poste pour pouvoir effectuer les différentes actions en même temps que moi.
 
+TIP: Si vous avez des soucis ou des questions, ouvrez une issue, je tâcherai d'y répondre.
+
+
 === Pour les utilisateurs de Linux
 
 Docker est natif pour Linux car il se repose sur certaines fonctionnalités du Kernel (>3.10)
 
 Il suffit donc d'installer le moteur c'est par ici : https://docs.docker.com/installation/
-Je vous laisse vous référer a votre distrib.
+Je vous laisse vous référer à votre distrib.
 
 Pour vérifier l'installation :
 [source,shell]
@@ -50,9 +53,10 @@ Si vous voulez procéder à l'installation :
 . la commande `vagrant --version` doit fonctionner
 . Sous {REP}, lancer la commande `vagrant up` (Le premier lancement est long.)
 . Connectez-vous à la VM `vagrant ssh`
-. Sous le shell de la vm vérifier l'installation : 
+. Sous le shell de la vm vérifier l'installation :
 [source,shell]
 ----
 > docker version
 > docker-compose --version
 ----
+. Vous pouvez stopper la VM avec `vagrant halt` _(une fois sortie de la session ssh)_.
