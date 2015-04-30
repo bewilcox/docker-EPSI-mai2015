@@ -19,10 +19,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, :inline => "chmod +x /usr/local/bin/docker-compose"
   config.vm.provision :shell, :inline => "curl -L https://raw.githubusercontent.com/docker/compose/1.1.0/contrib/completion/bash/docker-compose > /etc/bash_completion.d/docker-compose"
 
-
-  # Network configuration
-  config.vm.network :private_network, ip:"192.168.29.100"
-
   # Uncomment to map ports with the localhost
   #config.vm.network :forwarded_port, guest: 5000, host: 5000
 end
